@@ -1,4 +1,4 @@
-describe('HO-05 - Editar el nombre de un usuario existente desde la gestión global', () => {
+describe('Editar el nombre de un usuario existente desde la gestión global', () => {
     it('Debería editar el nombre del usuario Juan Pérez a Carlos Ramírez', () => {
       cy.visit('/');
   
