@@ -1,5 +1,6 @@
 import * as React from "react";
 import styles from "./TextInput.module.css";
+import './TextInput.module.css';
 
 interface TextInputProps {
   inputType?: "text" | "email" | "password";
