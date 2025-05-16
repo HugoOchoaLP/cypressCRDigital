@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./LoadingSpinner.module.css";
+import "./LoadingSpinner.module.css";
 
 interface LoadingSpinnerProps {
   /** Text to display below the spinner */
@@ -29,7 +30,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     styles[`spinner${size.charAt(0).toUpperCase() + size.slice(1)}`];
 
   return (
-    <div className={containerClass} data-testid="loading-spinner">
+    <div
+      className={containerClass}
+      data-testid={fullScreen ? "loading-spinner-fullscreen" : "loading-spinner"}
+    >
       <div className={`${styles.spinner} ${spinnerClass}`}></div>
       {text && <p className={styles.text}>{text}</p>}
       {subtext && <p className={styles.subtext}>{subtext}</p>}
